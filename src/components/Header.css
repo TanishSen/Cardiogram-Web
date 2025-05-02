@@ -1,0 +1,44 @@
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 4rem;
+  background-color: #fff;
+
+  margin: 4rem;
+  margin-top: 8rem;
+  margin-bottom: 4rem;
+}
+
+.header-title {
+  font-weight: bold;
+  font-size: 36px;
+  margin: 0;
+  margin-bottom: 2rem;
+}
+
+.header-buttons {
+  display: flex;
+  gap: 0;
+  font-size: 14px;
+  margin: 32px 0 0 0;
+}
+
+.header-button-primary {
+  background-color: #282828;
+  color: white;
+  padding: 8px 24px;
+  text-align: left;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.header-button-secondary {
+  background-color: white;
+  padding: 8px 24px;
+  border-radius: 5px;
+  text-align: left;
+  font-size: 14px;
+  font-weight: 500;
+  border: 1px solid #ccc;
+}
