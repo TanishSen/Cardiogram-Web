@@ -26,18 +26,22 @@ function Header({ userData, onChangeSession }) {
         backgroundColor: "#fff",
         paddingTop: "0px",
         position: "relative",
+        width: "100%",
       }}
     >
-      {/* Session navigation */}
+      {/* Session navigation - now positioned more to the right */}
       {onChangeSession && (
         <div
           className="session-navigation"
           style={{
             position: "absolute",
-            right: "10px",
-            top: "10px",
+            right: "0px", // Changed from 10px to 0px to make it rightmost
+            top: "50%", // Center vertically relative to the header
+            transform: "translateY(-50%)", // Perfect vertical centering
             display: "flex",
             gap: "5px",
+            zIndex: "10", // Ensure buttons are clickable
+            marginRight: "15px", // Give some padding from the edge
           }}
         >
           <button
@@ -45,12 +49,14 @@ function Header({ userData, onChangeSession }) {
             title="Previous Session"
             style={{
               fontSize: "16px",
-              padding: "4px 8px",
+              padding: "8px 12px", // Slightly larger buttons
               backgroundColor: "#f5f5f5",
               border: "1px solid #ddd",
               borderRadius: "4px",
               cursor: "pointer",
               color: "#333",
+              boxShadow: "0 2px 4px rgba(0,0,0,0.1)", // Subtle shadow
+              transition: "all 0.2s ease",
             }}
           >
             ←
@@ -60,12 +66,14 @@ function Header({ userData, onChangeSession }) {
             title="Next Session"
             style={{
               fontSize: "16px",
-              padding: "4px 8px",
+              padding: "8px 12px", // Slightly larger buttons
               backgroundColor: "#f5f5f5",
               border: "1px solid #ddd",
               borderRadius: "4px",
               cursor: "pointer",
               color: "#333",
+              boxShadow: "0 2px 4px rgba(0,0,0,0.1)", // Subtle shadow
+              transition: "all 0.2s ease",
             }}
           >
             →
